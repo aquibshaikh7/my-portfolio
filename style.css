@@ -764,6 +764,89 @@ body {
 }
 
 /*  */
+/* responsiveness */
+/* For tablets and small desktops - 768px and below */
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 60px 15px;
+  }
+
+  .page-heading h2 {
+    font-size: 28px;
+  }
+
+  .portfolio-section .item figure,
+  #more-projects .item figure {
+    width: 220px;
+    height: 220px;
+  }
+
+  .portfolio-section .item figure figcaption h4 {
+    font-size: 18px;
+  }
+
+  .portfolio-section .item figure figcaption p {
+    font-size: 14px;
+  }
+}
+
+/* For large mobile screens - 547px and below */
+@media (max-width: 547px) {
+  .page-heading {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .page-heading h2 {
+    font-size: 24px;
+  }
+
+  .portfolio-section .item figure,
+  #more-projects .item figure {
+    width: 180px;
+    height: 180px;
+  }
+
+  .portfolio-section .item figure figcaption h4 {
+    font-size: 16px;
+  }
+
+  .portfolio-section .item figure figcaption p {
+    font-size: 12px;
+  }
+
+  .portfolio-section {
+    padding: 40px 10px;
+  }
+}
+
+/* For small mobile screens - 480px and below */
+@media (max-width: 480px) {
+  .page-heading h2 {
+    font-size: 20px;
+  }
+
+  .portfolio-section .item figure,
+  #more-projects .item figure {
+    width: 150px;
+    height: 150px;
+  }
+
+  .portfolio-section .item figure figcaption h4 {
+    font-size: 14px;
+  }
+
+  .portfolio-section .item figure figcaption p {
+    font-size: 12px;
+  }
+
+  .portfolio-section {
+    padding: 30px 5px;
+  }
+}
+
+/*  */
 
 /* contact */
 
