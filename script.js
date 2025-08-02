@@ -104,7 +104,7 @@ const portfolioData = {
   1: {
     title: "My Portfolio",
     desc: "I turn ideas into interactive web solutions.",
-    website: "envato.com",
+    website: "https://my-portfolio-aquib-shaikh.netlify.app/",
     category: "Design, UI",
     img1: "img/1.png",
     img2: "img/2.png",
