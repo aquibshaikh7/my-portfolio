@@ -765,12 +765,15 @@ body {
 
 /*  */
 /* responsiveness */
-/* For tablets and small desktops - 768px and below */
+/* Tablet screens (768px and below) */
 @media (max-width: 768px) {
   .portfolio-section {
     padding: 60px 15px;
   }
-
+  #portfolio {
+    max-height: none;
+    overflow-y: auto;
+  }
   .page-heading h2 {
     font-size: 28px;
   }
@@ -781,16 +784,19 @@ body {
     height: 220px;
   }
 
-  .portfolio-section .item figure figcaption h4 {
-    font-size: 18px;
+  /* Ensure items center in responsive layout */
+  .d-flex.flex-wrap.justify-content-center {
+    gap: 20px;
   }
 
-  .portfolio-section .item figure figcaption p {
-    font-size: 14px;
+  /* View More Button always centered */
+  #view-more-btn {
+    margin-top: 20px;
+    display: inline-block;
   }
 }
 
-/* For large mobile screens - 547px and below */
+/* Large mobile screens (547px and below) */
 @media (max-width: 547px) {
   .page-heading {
     flex-direction: column;
@@ -808,41 +814,55 @@ body {
     height: 180px;
   }
 
-  .portfolio-section .item figure figcaption h4 {
-    font-size: 16px;
+  /* Keep spacing consistent */
+  .d-flex.flex-wrap.justify-content-center {
+    gap: 15px;
   }
 
-  .portfolio-section .item figure figcaption p {
-    font-size: 12px;
-  }
-
-  .portfolio-section {
-    padding: 40px 10px;
+  /* Button visible and centered */
+  #view-more-btn {
+    margin-top: 15px;
   }
 }
 
-/* For small mobile screens - 480px and below */
 @media (max-width: 480px) {
-  .page-heading h2 {
-    font-size: 20px;
+  /* Stack items vertically */
+  .d-flex.flex-wrap.justify-content-center {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 15px;
   }
 
+  /* Only first 4 items visible initially */
+  .d-flex.flex-wrap.justify-content-center > .item:nth-child(n + 5) {
+    display: none;
+  }
+
+  /* Hidden projects stack vertically */
+  #more-projects {
+    display: none; /* Hidden until button click */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Card size for mobile */
   .portfolio-section .item figure,
   #more-projects .item figure {
-    width: 150px;
-    height: 150px;
+    width: 90%;
+    max-width: 280px;
+    height: 180px;
   }
 
-  .portfolio-section .item figure figcaption h4 {
-    font-size: 14px;
+  #portfolio {
+    max-height: none !important;
+    overflow-y: auto !important;
   }
 
-  .portfolio-section .item figure figcaption p {
-    font-size: 12px;
-  }
-
-  .portfolio-section {
-    padding: 30px 5px;
+  /* Ensure button is visible */
+  #view-more-btn {
+    display: block;
+    margin: 20px auto 0 auto;
   }
 }
 
